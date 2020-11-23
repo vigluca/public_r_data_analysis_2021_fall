@@ -1,5 +1,5 @@
 
-# Assignemnt guide
+# Assignment guide
 
 ## General information
 
