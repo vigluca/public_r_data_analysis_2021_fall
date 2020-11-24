@@ -6,6 +6,8 @@ editor_options:
   chunk_output_type: console
 ---
 
+You will have to create 3 plots based on the datasets and instructions detailed below. You will find the plots themeselves in the `assignments/assignment_2_plots`. Your task is to write the code that will reproduce the plots as closely as possible.
+
 # Skills needed to solve this assignment
 
 -   Using R and RStudio, reading data
