@@ -9,7 +9,7 @@ you can save a lot of time for yourself. If you have any more question
 after reading this guide please write Marton Kovacs at
 <marton.balazs.kovacs@gmail.com>.
 
-**Note: You only have to finish two assignments of your choosing. You do
+**Note: You only have to finish THREE(3) assignments of your choosing. You do
 not have to do all of them.**
 
 ## How to submit the assignemnts
