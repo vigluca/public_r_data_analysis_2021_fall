@@ -17,6 +17,7 @@ not have to do all of them.**
 Submitting the assignments will require the use of Git and Github. There
 is a detailed tutorial on how to use Git with R that you can find here:
 <https://happygitwithr.com/>
+You should also fininsh the Datacamp course about git and Github on Canvas.
 
   - To work on your assignments please fork this repository.
   - Work on each assignment in the .Rmd files in the “assignment/”
