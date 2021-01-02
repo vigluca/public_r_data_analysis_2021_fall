@@ -32,7 +32,23 @@ Note: There are several different ways to solve these tasks, feel free to come u
 Read the cocktail dataset from: <https://github.com/nthun/cocktail-balance> You can also find the codebook there.
 
 ```{r}
+library(tidyverse)
 
+cocktails <- read_tsv("https://raw.github.com/nthun/cocktail-balance/master/cocktail_data.tsv")
+cols(
+  name = col_character(),
+  abv = col_double(),
+  acid = col_double(),
+  sugar = col_double(),
+  type = col_character(),
+  index = col_double(),
+  instructions = col_character(),
+  ingredients = col_factor(),
+  ncotw = col_character()
+)
+
+
+head(cocktails)
 ```
 
 ## 2. Transform the data table and clean the ingredient variable!
@@ -40,7 +56,8 @@ Read the cocktail dataset from: <https://github.com/nthun/cocktail-balance> You 
 The ingredients are currently in a single cell for each cocktail. It would be better to put them in separate rows. Also, the variable should be cleaned of all quantities (e.g. 1/2 oz, 2 dashes, etc.), and the indicator of alcohol content (e.g. 47.3% abv). You will need to use this cleaned table in later tasks.
 
 ```{r}
-
+cocktails_sep<-separate(cocktails, col="ingredients", into=c("ing_1", "ing_2", "ing_3", "ing_4", "ing_5", "ing_6", "ing_7"), sep="<br/>")
+  cocktails_sep
 ```
 
 ## 3. All ingredients in alphabetical order
