@@ -69,6 +69,14 @@ cocktails_sep_new4<-cocktails_sep_new3 %>%mutate("ing_4"=str_replace_all(string=
 cocktails_sep_new5<-cocktails_sep_new4 %>%mutate("ing_5"=str_replace_all(string=ing_5, pattern='[^[:alnum:]]',replacement = ""))
 cocktails_sep_final<-cocktails_sep_new5 %>%mutate("ing_6"=str_replace_all(string=ing_6, pattern='[^[:alnum:]]',replacement = ""))
 
+
+
+cocktails_united<-cocktails_sep_final%>%unite(ingredients,c("ing_1", "ing_2", "ing_3", "ing_4", "ing_5", "ing_6"), sep=",", remove = TRUE, na.rm = TRUE)
+glimpse(cocktails_united)
+cocktails_factors<-cocktails_united%>% mutate_if(is.character, as.factor)
+
+str(cocktails_factors)
+
 ```
 
 ## 3. All ingredients in alphabetical order
@@ -76,7 +84,7 @@ cocktails_sep_final<-cocktails_sep_new5 %>%mutate("ing_6"=str_replace_all(string
 Before opening the bar, you need to find a reliable supplier that has all the ingredients. You need to send a list of all possible ingredients you will need. They don't need the quantities (i.e. how many of these are needed), just the names of the ingredients.
 
 ```{r}
-cocktails_clear
+levels(cocktails_factors$ingredients)
 ```
 
 ## 4. Number of unique ingredients
